@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import accomRouter from "./services/accommodation";
 import destRouter from "./services/destination";
+import usersRouter from "./services/user";
 
 
 process.env.TS_NODE_ENV ? require("dotenv").config() : require("dotenv").config()
@@ -17,4 +18,5 @@ server.use(express.json())
 //ROUTES
 server.use("/accommodation", accomRouter)
 server.use("/destinations", destRouter)
+server.use("/users", usersRouter)
 
