@@ -2,6 +2,7 @@ import express from "express";
 import createHttpError from "http-errors";
 import { jwtAuth } from "../../tools";
 import { UserModel } from "./schema";
+import { IstaticCheck } from "../../interfaces/IUserDocument";
 
 const usersRouter = express.Router();
 

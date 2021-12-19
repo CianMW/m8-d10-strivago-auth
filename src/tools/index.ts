@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { IUserModel } from "../interfaces/IUserModel";
+import { IUserDocument } from "../interfaces/IUserDocument";
 process.env.TS_NODE_ENV && require("dotenv").config() 
 
 
@@ -8,7 +8,7 @@ type payload = {
 }
 
 
-export const jwtAuth = async (user: IUserModel) => {
+export const jwtAuth = async (user: IUserDocument) => {
   const token = await generateJWTToken({ _id: user._id });
   return token;
 };
